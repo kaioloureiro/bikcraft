@@ -1,5 +1,9 @@
 .container {
-    max-width: 1000px;
+    display: grid;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .logo {
@@ -23,14 +27,6 @@
     position: relative;
 }
 
-@media (max-width: 500px) {
-
-    .content {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
 .content::before {
     content: "";
     display: flex;
@@ -42,7 +38,7 @@
     top: 30px;
 }
 
-@media (max-width: 916px) {
+@media (max-width: 985px) {
     .content::before {
         display: none;
     }
@@ -51,7 +47,15 @@
 .info,
 .vantagens {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 985px) {
+
+    .info,
+    .vantagens {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .intro {
@@ -61,6 +65,13 @@
     justify-items: end;
     padding: 2.5rem;
     text-align: right;
+}
+
+@media (max-width: 985px) {
+    .intro {
+        justify-items: center;
+        text-align: center;
+    }
 }
 
 .intro h1 {
@@ -79,10 +90,22 @@
     background-color: var(--vermelhoescuro);
 }
 
+.foto img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
 .subtitulo {
     display: flex;
     align-items: center;
     background-color: var(--bgcolor);
+}
+
+@media (max-width: 985px) {
+    .subtitulo {
+        justify-content: end;
+    }
 }
 
 .subtitulo h2 {
@@ -92,6 +115,14 @@
     text-align: right;
     text-transform: uppercase;
     padding: 1.9rem 2.5rem;
+}
+
+@media (max-width: 985px) {
+    .subtitulo h2 {
+        font-size: 3rem;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .vantagens-item {
@@ -148,10 +179,8 @@
 }
 
 body {
-    display: grid;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bgcolor);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 li a {
@@ -162,6 +191,12 @@ li a {
     border: 2px solid transparent;
     border-radius: 4px;
 }
+
+/* @media (max-width: 635px) {
+    li a {
+        font-size: 0.8rem;
+    }
+} */
 
 li a:hover {
     border-color: var(--vermelho);
@@ -177,5 +212,6 @@ p {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
