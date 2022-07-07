@@ -9,13 +9,49 @@
     padding: 50px 0;
 }
 
-.info {
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.content {
+    display: grid;
+    background-color: #fff;
+    margin: 50px 0;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    display: flex;
+    justify-self: center;
+    background-color: var(--vermelho);
+    width: 3.75rem;
+    height: calc(1rem/4);
+    position: absolute;
+    top: 30px;
+}
+
+.info,
+.vantagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+}
+
+.intro {
     display: grid;
     gap: 20px;
     align-self: center;
     justify-items: end;
     padding: 2.5rem;
     text-align: right;
+}
+
+.intro h1 {
+    font-size: 2rem;
 }
 
 .botao {
@@ -73,6 +109,12 @@
     grid-row: span 2;
 }
 
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
 /* Especificações Gerais */
 
 :root {
@@ -97,33 +139,6 @@ body {
     background-color: var(--bgcolor);
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-    background-color: #fff;
-    margin: 50px 0;
-    position: relative;
-}
-
-main::before {
-    content: "";
-    display: flex;
-    justify-self: center;
-    background-color: var(--vermelho);
-    width: 3.75rem;
-    height: calc(1rem/4);
-    position: absolute;
-    top: 30px;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
-}
-
 li a {
     display: inline-block;
     background-color: #fff;
@@ -134,7 +149,7 @@ li a {
 }
 
 li a:hover {
-    border: 2px solid var(--vermelho);
+    border-color: var(--vermelho);
 }
 
 a {
@@ -148,10 +163,4 @@ p {
 
 img {
     max-width: 100%;
-}
-
-footer {
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
 }
