@@ -189,9 +189,9 @@ img {
     }
 }
 
-@media (min-width: 414px) and (max-width: 768px) {
+@media (min-width: 414px) and (max-width: 980px) {
     .subtitulo h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
