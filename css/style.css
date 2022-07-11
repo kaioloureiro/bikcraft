@@ -201,10 +201,6 @@ img {
         font-size: calc(1rem - 20%);
     }
 
-    li a {
-        padding: 0.8rem 1rem;
-    }
-
     .container {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
@@ -216,6 +212,10 @@ img {
 
     .menu {
         gap: 0.8rem;
+    }
+
+    li a {
+        padding: 0.8rem 1rem;
     }
 
     .info,
