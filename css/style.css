@@ -189,6 +189,16 @@ img {
     }
 }
 
+@media (max-width:475px) {
+    .menu {
+        gap: 0.8rem;
+    }
+
+    li a {
+        padding: 0.8rem 1rem;
+    }
+}
+
 @media (min-width: 414px) and (max-width: 980px) {
     .subtitulo h2 {
         font-size: 3rem;
@@ -196,7 +206,6 @@ img {
 }
 
 @media (max-width: 768px) {
-
     * {
         font-size: calc(1rem - 20%);
     }
@@ -208,14 +217,6 @@ img {
 
     .content::before {
         display: none;
-    }
-
-    .menu {
-        gap: 0.8rem;
-    }
-
-    li a {
-        padding: 0.8rem 1rem;
     }
 
     .info,
