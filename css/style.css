@@ -190,6 +190,12 @@ img {
     }
 }
 
+@media (min-width: 414px) and (max-width: 980px) {
+    .subtitulo h2 {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width:475px) {
     .menu {
         gap: 0.8rem;
@@ -200,9 +206,18 @@ img {
     }
 }
 
-@media (min-width: 414px) and (max-width: 980px) {
-    .subtitulo h2 {
-        font-size: 3rem;
+@media (max-width:545px) {
+    .content::before {
+        display: none;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        justify-items: center;
+        text-align: center;
     }
 }
 
@@ -216,18 +231,8 @@ img {
         padding-right: 1.25rem;
     }
 
-    .content::before {
-        display: none;
-    }
-
-    .info,
     .vantagens {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .intro {
-        justify-items: center;
-        text-align: center;
+        grid-template-columns: 1fr;
     }
 
     .subtitulo {
